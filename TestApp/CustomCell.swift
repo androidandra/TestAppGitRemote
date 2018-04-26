@@ -9,8 +9,7 @@
 import UIKit
 import SnapKit
 
-class Cell: UICollectionViewCell {
+class CustomCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
     
 }

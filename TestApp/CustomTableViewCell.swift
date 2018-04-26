@@ -7,9 +7,29 @@
 //
 
 import UIKit
+import SnapKit
 
 class CustomTableViewCell: UITableViewCell {
-
+    
+    let label = UILabel()
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        
+        contentView.addSubview(label)
+        
+        label.snp.makeConstraints { (make) -> Void in
+            make.edges.equalTo(contentView).inset(UIEdgeInsetsMake(10, 10, 10, 0))
+            
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
